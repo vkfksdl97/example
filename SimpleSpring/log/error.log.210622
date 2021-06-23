@@ -1,0 +1,50 @@
+[2021-06-22 22:55:53.434][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+1. SELECT deptno, dname, loc FROM department WHERE deptno=101;
+ {executed in 62 msec}
+[2021-06-22 22:55:53.603][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+2. SELECT deptno, dname, loc FROM department
+
+         WHERE dname LIKE concat('%', '공학', '%') 
+
+        ORDER BY deptno DESC
+ {executed in 24 msec}
+[2021-06-22 22:55:53.774][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+3. INSERT INTO department (dname, loc) VALUES ('신규학과', NULL);
+ {executed in 108 msec}
+[2021-06-22 22:55:53.777][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+3. getGeneratedKeys on query: INSERT INTO department (dname, loc) VALUES ('신규학과', NULL);
+ {executed in 1 msec}
+[2021-06-22 22:55:53.838][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+4. DELETE FROM department WHERE deptno=203;
+ {executed in 2 msec}
+[2021-06-22 22:55:53.883][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+5. UPDATE department SET dname='수정학과', loc='5호관'
+        WHERE deptno=204;
+ {executed in 3 msec}
+[2021-06-22 22:55:53.939][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+6. SELECT COUNT(*) FROM department
+ {executed in 3 msec}
+[2021-06-22 22:55:54.001][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+7. SELECT COUNT(*) FROM department
+
+         WHERE dname LIKE concat('%', '공학', '%')
+ {executed in 2 msec}
+[2021-06-22 22:55:54.072][ERROR] Slf4jSpyLogDelegator.sqlTimingOccurred(Slf4jSpyLogDelegator.java:355)  jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+8. SELECT
+            profno, name, userid, position, sal, 
+            date_format(hiredate, '%Y-%m-%d') as h_date,
+            comm, p.deptno, dname, loc
+        FROM professor as p
+        INNER JOIN department as d
+        ON p.deptno = d.deptno
+
+         WHERE dname LIKE concat('%', '공학', '%')
+ {executed in 15 msec}
+[2021-06-22 23:11:34.957][ERROR] DepartmentServiceImpl.editDepartment(DepartmentServiceImpl.java:138) result=0
+[2021-06-22 23:11:34.958][ERROR] DepartmentServiceTest.testF(DepartmentServiceTest.java:143) 수정된 데이터가 없습니다.
+[2021-06-22 23:11:35.007][ERROR] DepartmentServiceImpl.deleteDepartment(DepartmentServiceImpl.java:165) result=0
+[2021-06-22 23:11:35.008][ERROR] DepartmentServiceTest.testG(DepartmentServiceTest.java:160) 삭제된 데이터가 없습니다.
+[2021-06-22 23:28:30.623][ERROR] DepartmentServiceImpl.editDepartment(DepartmentServiceImpl.java:138) result=0
+[2021-06-22 23:28:30.623][ERROR] DepartmentServiceTest.testF(DepartmentServiceTest.java:143) 수정된 데이터가 없습니다.
+[2021-06-22 23:28:30.675][ERROR] DepartmentServiceImpl.deleteDepartment(DepartmentServiceImpl.java:165) result=0
+[2021-06-22 23:28:30.675][ERROR] DepartmentServiceTest.testG(DepartmentServiceTest.java:160) 삭제된 데이터가 없습니다.

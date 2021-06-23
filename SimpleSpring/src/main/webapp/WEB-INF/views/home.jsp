@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page trimDirectiveWhitespaces="true" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page session="false" %>
 <html>
 <head>
@@ -42,6 +44,12 @@
 	<h2>AOPController</h2>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/aop/calc.do">AOP 테스트</a></li>
+	</ul>
+	
+	<!-- 데이터베이스 연동 -->
+	<h2>Database</h2>
+	<ul>
+		<li><a href="${pageContext.request.contextPath}/department/list.do">학과관리 웹 페이지</a></li>
 	</ul>
 
 <script src="${pageContext.request.contextPath}/assets/js/script.js"></script>

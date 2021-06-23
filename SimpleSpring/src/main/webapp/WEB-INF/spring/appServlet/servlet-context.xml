@@ -34,23 +34,23 @@
 			<beans:bean id="appInterceptor" class="study.spring.simplespring.interceptor.AppInterceptor" />
 		</interceptor>
 	</interceptors>
-	
-	<!-- 스케줄러 어노테이션 선언 -->
+	<!-- 
+	스케줄러 어노테이션 선언
 	<task:annotation-driven/>
 	
-	<!-- 스케줄러로 동작할 객체 생성 -->
+	스케줄러로 동작할 객체 생성
 	<beans:bean id="scheduleJob" class="study.spring.simplespring.scheduler.SimpleScheduler" />
 	
-	<!-- 생성한 스케줄러 객체에 대한 작업 스케줄 지정 -->
+	생성한 스케줄러 객체에 대한 작업 스케줄 지정
 	<task:scheduled-tasks>
-		<!-- 1초마다 실행되는 작업 -->
+		1초마다 실행되는 작업
 		<task:scheduled ref="scheduleJob" method="everySeconds" cron="* * * * * ?" />
-		<!-- 매 분 0초에 실행되는 작업 -->
+		매 분 0초에 실행되는 작업
 		<task:scheduled ref="scheduleJob" method="everyMinites" cron="0 * * * * ?" />
-		<!-- 10초마다 한 번씩 실행되는 작업 -->
+		10초마다 한 번씩 실행되는 작업
 		<task:scheduled ref="scheduleJob" method="every10Seconds" cron="0/10 * * * * ?"/>
-		<!-- 매일 자정에 실행되는 작업 -->
+		매일 자정에 실행되는 작업
 		<task:scheduled ref="scheduleJob" method="everyMidnight" cron="0 0 0 * * ?"/>
 	</task:scheduled-tasks>
-	 
+	  -->
 </beans:beans>
